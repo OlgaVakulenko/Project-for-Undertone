@@ -1,0 +1,589 @@
+@font-face{
+    font-family: 'DINNextLTPro';
+    src: url('./Fonts/DINNextLTPro-Heavy.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*// MAIN //*/
+body {
+    margin: 0;
+}
+.hide {
+    display: none;
+}
+
+
+/*// Static Elements //*/
+.main-bg {
+    width: 100%;
+    height: 100vh;
+    background: url('./Img/Desktop_bg.png') no-repeat center;
+    background-size: cover;
+}
+.bunner {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(63, 64, 67,.5), rgba(204, 204, 204,.5) 100%);
+    position: relative;
+}
+.close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px rgba(255, 255, 255, .8) solid;
+    padding: 4px;
+    background: radial-gradient(20px,rgba(0,0,0,.7) 85%,#fff 100%, #fff 100%) content-box;
+    opacity: .7;
+    margin: 10px 10px 0 0;
+    z-index: 100;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.close::before {
+    content:'';
+    position: absolute;
+    top: 14px;
+    left: 23px;
+    width: 2px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(130deg);
+}
+.close::after {
+    content:'';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    top: 14px;
+    left: 23px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+
+
+/*// Animated Elements //*/
+.cup-in-hands {
+    background: url('./Img/Cup.png') no-repeat center; 
+    background-size: contain;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.confeti-bottom {
+    width: 100%;
+    height: 60vh;
+    background: url('./Img/splash-half.png');
+    position: absolute;
+    bottom: 0;
+    z-index: 3;    
+}
+.confeti-top {
+    width: 100%;
+    height: 60vh;
+    background-image: url('./Img/Splash.png');
+    position: absolute;
+    top: 0;
+    z-index: 3;  
+    opacity: 0;  
+}
+.team1 {
+    background: url('./Img/POR-team.png') no-repeat;
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-position: top;
+    background-origin: padding-box;
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+}
+.team2 {
+    background: url('./Img/DAL-team.png') no-repeat;
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-position: bottom;
+    background-origin: padding-box;
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    bottom:0;
+    right:0;
+    z-index: 10;
+}
+.text {
+    width: 510px;
+    height: 530px;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+    z-index: 11;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'DINNextLTPro';
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.75;
+    text-shadow: 6px 4px 9px rgba(0,0,0,1);
+}
+.one {
+    font-size: 283px;
+    margin: 0;
+}
+.game {
+    font-size: 199px;
+    margin: 0;
+}
+.glory {
+    font-size: 112px;
+    padding-left: 14px;
+    margin: 0;
+}
+.team-logo {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    z-index: 11;
+    background-size: 100% 100%;
+}
+.tl1 {
+    background-image: url('./Img/Port-logo.png');
+    left: 5%;
+    animation: emergeRight 3s linear; 
+}
+.tl2 {
+    background-image: url('./Img/Dal-logo.png');
+    right: 5%;
+    animation: emergeLeft 3s linear; 
+}
+.poster {
+    background: url('./Img/poster.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.poster-fon {
+    background-color: #525252;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+.btn-box {
+    margin-top: 120px;
+    margin-left: 67%;
+    width: 150px;
+    height: 120px;
+    text-align: center;
+    position: relative;
+}
+.videoBtn {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: 2px rgba(255, 255, 255, .8) solid;
+    padding: 5px;
+    background: radial-gradient(34px, rgba(0,0,0,.7) 85%,#fff 100%, #fff 100%) content-box;
+    opacity: .7;
+    margin: 0 auto;
+    z-index: 9;
+    position: relative;
+    cursor: pointer;
+}
+.line1 {
+    position: absolute;
+    top: 20px;
+    left: 38px;
+    width: 2px;
+    height: 35px;
+    background: #fff;
+    transform: rotate(90deg);
+}
+.line2 {
+    position: absolute;
+    top: 20px;
+    left: 38px;
+    width: 2px;
+    height: 35px;
+    background: #fff;
+    transform: rotate(0deg);
+}
+.videoBtn-txt {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'DINNextLTPro';
+    font-weight: bold;
+    text-shadow: 6px 4px 7px rgba(0,0,0,1);
+}
+.cursor {
+    width: 60px;
+    height: 60px;
+    background: url('./Img/Cursor\ -\ Hand.png') no-repeat;
+    z-index: 10;
+    position: absolute;
+    bottom:0;
+    right: 0;
+    opacity:1;
+    animation: cursorMove 3s linear;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+.videoBlock {
+    width: 640px;
+    height: 360px;
+    position: relative;
+    margin: -80px auto;
+    z-index: 8;
+    cursor: pointer; 
+}
+.playBtn {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px rgba(255, 255, 255, .8) solid;
+    padding: 7px;
+    background: radial-gradient(56px, rgba(0,0,0,.7) 85%,#fff 100%, #fff 100%) content-box;
+    margin: 0 auto;
+    z-index: 9;
+    position: relative;
+    top: 33%;
+}
+.playBtn::after {
+    content:'';
+    background: url('./Img/play-icon.png') no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top:34px;
+    left:50px;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*// Animation Classes //*/
+.slideUp {
+    animation: slideUp 3s linear;
+}
+.half-slideUp {
+    animation: half-slideUp 3s linear;
+}
+.opacityOut {
+    animation: opacityOut 2s linear;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+}
+.slideRight {
+    animation: slideRight 3s linear;
+}
+.slideLeft {
+    animation: slideLeft 3s linear;
+}
+.slideOutRight {
+    animation: slideOutRight 3s linear;
+    animation-fill-mode: both;
+}
+.slideOutLeft {
+    animation: slideOutLeft 3s linear;
+    animation-fill-mode: both;
+}
+.opacityIn {
+    animation: opacityIn 1s linear;
+    animation-fill-mode: both;
+}
+.openPopUp {
+    animation: openPopUp 0.6s linear;
+    transform-origin: 100% 0;
+}
+.lightOut {
+    animation: lightOut 3s linear;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+
+/*// Animations //*/
+@keyframes slideUp {
+    0%{
+        transform: translateY(100%);
+    }
+    50%{
+        transform: translateY(60%);
+    }
+    80%{
+        transform: translateY(20%);
+    }
+    100% {
+        transform: translateY(0%);
+    }   
+}
+@keyframes half-slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    50%{
+        transform: translateY(80%);
+    }
+    65%{
+        transform: translateY(50%);
+    }
+    80%{
+        transform: translateY(30%);
+    }
+    100% {
+        transform: translateY(0%);
+    }   
+}
+@keyframes opacityOut{
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: .3;
+    }
+    70% {
+        opacity: .6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-150%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    65%{
+        transform: translateX(-60%);
+    }
+    80%{
+        transform: translateX(-30%);
+    }
+    95%{
+        transform: translateX(-10%);
+    }           
+    100% {
+        transform: translateX(0%);
+    }   
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(150%);
+    }
+    50%{
+        transform: translateX(100%);
+    }
+    65%{
+        transform: translateX(60%);
+    }
+    80%{
+        transform: translateX(30%);
+    }
+    95%{
+        transform: translateX(10%);
+    }           
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes emergeRight {
+    0% {
+        transform: translateX(-150%);
+        width: 970px;
+        height: 970px;
+        opacity: .3;
+    }
+    50%{
+        transform: translateX(-100%);
+        width: 850px;
+        height: 850px;
+        opacity: .5;
+    }
+    65%{
+        transform: translateX(-60%);
+        width: 650px;
+        height: 650px;
+        opacity: .6;
+    }
+    80%{
+        transform: translateX(-30%);
+        width: 500px;
+        height: 500px;
+        opacity: .8;
+    }
+    95%{
+        transform: translateX(-10%);
+        width: 370px;
+        height: 370px;
+        opacity: .9;
+    }           
+    100% {
+        transform: translateX(0%);
+        width: 300px;
+        height: 300px;
+        opacity: 1;
+    }
+}
+@keyframes emergeLeft {
+    0% {
+        transform: translateX(150%);
+        width: 977px;
+        height: 977px;
+        opacity: .3;
+    }
+    50%{
+        transform: translateX(100%);
+        width: 900px;
+        height: 900px;
+        opacity: .5;
+    }
+    65%{
+        transform: translateX(60%);
+        width: 750px;
+        height: 750px;
+        opacity: .6;
+    }
+    80%{
+        transform: translateX(30%);
+        width: 500px;
+        height: 500px;
+        opacity: .8;
+    }
+    95%{
+        transform: translateX(10%);
+        width: 370px;
+        height: 370px;
+        opacity: .9;
+    }           
+    100% {
+        transform: translateX(0%);
+        width: 300px;
+        height: 300px;
+        opacity: 1;
+    }
+}
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(-10%);
+    }
+    65%{
+        transform: translateX(-30%);
+    }
+    80%{
+        transform: translateX(-60%);
+    }
+    95%{
+        transform: translateX(-100%);
+    }           
+    100% {
+        transform: translateX(-150%);
+    }   
+}
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(10%);
+    }
+    65%{
+        transform: translateX(30%);
+    }
+    80%{
+        transform: translateX(60%);
+    }
+    95%{
+        transform: translateX(100%);
+    }           
+    100% {
+        transform: translateX(150%);
+    }
+}
+@keyframes opacityIn{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes lightOut{
+    0% {
+        opacity: .7;
+    }
+    70% {
+        opacity: .4;
+    }
+    50% {
+        opacity: .2; 
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes cursorMove {
+    0% {
+        transform: translate(0%);
+        opacity: 0;
+    }
+    20%{
+        transform: translate(0%);
+        opacity: .5;
+    }
+    30%{
+        transform: translate(-10%, -10%);
+        opacity: 1;
+    }
+    40%{
+        transform: translate(-20%, -20%);
+    }
+    50%{
+        transform: translate(-30%,-30%);
+    }           
+    60% {
+        transform: translate(-50%, -50%);
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+@keyframes openPopUp {
+    0% {
+        transform: scale(0)
+    }
+    70% {
+        transform: scale(0.1, 0.1)
+    }
+    50% {
+        transform: scaleX(0.6, 0.6)
+    }
+    100% {
+        transform: scaleX(1)
+    }
+}
